@@ -1,0 +1,83 @@
+.main-page {
+  background-image: url(./img/pac_man.jpg);
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  height:100vh;
+  background-position: 0%;
+}
+
+
+a{
+  font-size: 2em;
+  /* border:1px black solid; */
+  padding: 8px 10px 8px 10px;
+  border-radius: 46%;
+  /* margin: 31px 0 0 0; */
+  background: #b26060;
+  color: white;
+}
+
+  
+.box {
+  display: inline-block;       
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  }
+
+.off {
+  background-color: rgb(224, 229, 192);
+}
+
+.on {
+  background-color: rgb(119, 23, 23);
+}
+  
+.box:hover { 
+  background: #00CCFF;
+}
+
+.center {
+  margin: auto;
+  display: table;
+  /* margin-top: 10px; */
+}
+
+.grid {
+  width: 150px;
+  line-height: 0;
+  margin: auto;
+  box-shadow: 0px 0px 20px white;
+  margin-top: 20px;
+}
+  
+h1, h2, h3, h4 {
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-control{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 10px 0;
+}
