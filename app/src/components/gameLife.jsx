@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Grid from './Grid'
 import Buttons from './Buttons'
-
+import { Link } from 'react-router-dom'
 import "../App.css";
 
 
@@ -19,15 +19,18 @@ class Game extends Component {
         .map(() => Array(this.cols).fill(false)),
     };
   }
+  arrayClone = (arr) => {
+    return JSON.parse(JSON.stringify(arr));
+  }
   selectBox = (row, col) => {
-    let gridCopy = arrayClone(this.state.gridFull);
+    let gridCopy = this.arrayClone(this.state.gridFull);
     gridCopy[row][col] = !gridCopy[row][col];
     this.setState({
       gridFull: gridCopy
     });
   };
   renew = () => {
-    let gridCopy = arrayClone(this.state.gridFull);
+    let gridCopy = this.arrayClone(this.state.gridFull);
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.cols; j++) {
         if (Math.floor(Math.random() * 4) === 1) {
@@ -52,7 +55,7 @@ class Game extends Component {
     this.playButton();
   };
   fast = () => {
-    this.speed = 100;
+    this.speed = 50;
     this.playButton();
   };
   clear = () => {
@@ -61,27 +64,36 @@ class Game extends Component {
       gridFull: grid,
       generation: 0,
     });
+    this.pauseButton()
   };
   gridSize = (size) => {
     switch (size) {
       case "1":
-        this.cols = 20;
-        this.rows = 10;
+        this.cols = 15;
+        this.rows = 5;
         break;
       case "2":
         this.cols = 50;
         this.rows = 30;
         break;
       default:
-        this.cols = 70;
-        this.rows = 50;
+        this.cols = 60;
+        this.rows = 40;
     }
     this.clear();
+    
   };
+
+  resetGame = () => {
+    if (this.state.generation === 1000){
+      this.clear()
+      this.renew()
+    }
+  }
 
   play = () => {
     let g = this.state.gridFull;
-    let g2 = arrayClone(this.state.gridFull);
+    let g2 = this.arrayClone(this.state.gridFull);
 
     for (let i = 0; i < this.rows; i++) {
         for (let j = 0; j < this.cols; j++) {
@@ -98,22 +110,31 @@ class Game extends Component {
           if (!g[i][j] && count === 3) g2[i][j] = true;
         }
     }
+
     this.setState({
       gridFull: g2,
       generation: this.state.generation + 1,
+     
     });
   };
   componentDidMount() {
     this.renew();
     this.playButton();
+    if(this.state.generations === 100){
+      this.setState(this.renew)
+    }
   }
 
   render() {
     return (
       <div>
-        <h1>John Conway's The Game of Life</h1>
+        <h1 className='title-game'>John Conway's The Game of Life</h1>
+        <div className='instructions-div'>
+          <Link to="/rules" className='instruc'>Instructions</Link>
+        </div>
         <div className='screen-control'>
         <Buttons
+          generation={this.state.generation}
           playButton={this.playButton}
           pauseButton={this.pauseButton}
           slow={this.slow}
@@ -129,13 +150,11 @@ class Game extends Component {
           selectBox={this.selectBox}
         />
         </div>
-        {/* <h2>Generations: {this.state.generation}</h2> */}
+        
       </div>
     );
   }
 }
-function arrayClone(arr) {
-  return JSON.parse(JSON.stringify(arr));
-}
+
 
 export default Game;
