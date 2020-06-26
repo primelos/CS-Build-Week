@@ -3,7 +3,7 @@ import Grid from './Grid'
 import Buttons from './Buttons'
 import { Link } from 'react-router-dom'
 import "../App.css";
-
+import Spin from 'react-reveal/Spin';
 
 class Game extends Component {
   constructor() {
@@ -128,7 +128,9 @@ class Game extends Component {
   render() {
     return (
       <div>
+        <Spin>
         <h1 className='title-game'>John Conway's The Game of Life</h1>
+        </Spin>
         <div className='instructions-div'>
           <Link to="/rules" className='instruc'>Instructions</Link>
         </div>

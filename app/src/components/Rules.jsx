@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LightSpeed from 'react-reveal/LightSpeed';
+
 
 const Rules = () => {
   return (
     <div>
+        <LightSpeed left>
       <div className="rules">
         <h1 className="dark">Intro</h1>
         <p>
@@ -37,6 +40,7 @@ const Rules = () => {
       <div className="go-back">
         <Link to='/game' className='btn'>Go to the Game</Link>
       </div>
+      </LightSpeed>
     </div>
   );
 };
