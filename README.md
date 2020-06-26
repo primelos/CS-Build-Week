@@ -1,4 +1,4 @@
-https://cs-build-week-bir0jrv12.vercel.app/game
+https://cs-build-week-git-master.cvenegas9.vercel.app/
 
 # Cellular Automata and Conway's "Game of Life"
 
