@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import {
   ButtonToolbar,
   Button,
+  DropdownButton,
+  Dropdown,
 } from "react-bootstrap";
 
 class Buttons extends Component {
@@ -13,6 +15,7 @@ class Buttons extends Component {
     render() {
       return (
         <div className="center">
+            <h2 className='counter'> {this.props.generation}</h2>
           <ButtonToolbar>
             <Button  variant="success" onClick={this.props.playButton}>
               Play
@@ -23,7 +26,7 @@ class Buttons extends Component {
             <Button  onClick={this.props.clear}>
               Clear
             </Button>
-            {/* <Button  onClick={this.props.slow}>
+            <Button  onClick={this.props.slow}>
               Slow
             </Button>
             <Button  onClick={this.props.fast}>
@@ -37,10 +40,10 @@ class Buttons extends Component {
               id="size-menu"
               onSelect={this.handleSelect}
             >
-              <Dropdown.Item eventKey="1">20x10</Dropdown.Item>
+              <Dropdown.Item eventKey="1">15x5</Dropdown.Item>
               <Dropdown.Item eventKey="2">50x30</Dropdown.Item>
-              <Dropdown.Item eventKey="3">70x50</Dropdown.Item>
-            </DropdownButton> */}
+              <Dropdown.Item eventKey="3">70x39</Dropdown.Item>
+            </DropdownButton>
           </ButtonToolbar>
         </div>
       );

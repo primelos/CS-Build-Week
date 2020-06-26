@@ -27,9 +27,7 @@ const HomePage = () => {
     <div>
       <H>The Game of Life</H>
       <DivA>
-        <Link to="/game">Enter the Game</Link>
-        
-
+        <Link className='enter' to="/game">Enter the Game</Link>
       </DivA>
       
     </div>
