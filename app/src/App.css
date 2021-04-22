@@ -9,10 +9,11 @@
 
 .enter {
   font-size: 2em;
-  padding: 8px 10px 8px 10px;
+  padding: 10px 20px 10px 20px;
   border-radius: 46%;
-  background: #b26060;
+  background: #f1a3a5;
   color: white;
+  text-decoration: none;
 }
 
   
@@ -78,6 +79,7 @@ h4 {
 
 button {
   margin: 10px 0;
+  outline: none;
 }
 
 .title-game {
@@ -142,3 +144,4 @@ a.instruc {
 .btn {
   background-color: burlywood;
 }
+

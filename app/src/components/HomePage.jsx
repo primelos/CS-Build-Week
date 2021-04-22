@@ -18,9 +18,19 @@ font-family: 'Open Sans Condensed', sans-serif;
 box-shadow: inset 0px 0px 20px 12px black;
 }
 `;
+
 const DivA = styled.div`
   text-align: center;
   padding-top: 20px;
+`;
+
+const Go = styled(Link)`
+  :hover {
+    text-decoration: none;
+    color: lightgray;
+    background: #992020;
+    transform: scale(0.9);
+  }
 `;
 
 const HomePage = () => {
@@ -29,7 +39,7 @@ const HomePage = () => {
         <Fade delay={900}>
       <H>The Game of Life</H>
       <DivA>
-        <Link className='enter' to="/game">Enter the Game</Link>
+        <Go className='enter' to="/game">Enter the Game</Go>
       </DivA>
       </Fade>
     </div>
