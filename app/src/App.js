@@ -8,6 +8,7 @@ function App() {
     <div className='main-page'>
      
       <Routes />
+  
     </div>
   );
 }

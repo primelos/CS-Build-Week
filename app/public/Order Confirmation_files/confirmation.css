@@ -1,0 +1,152 @@
+body {
+	background: #FFF;
+	font-family: "proxima-nova", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+@media print {
+	body { font-family: Helvetica, Arial, "Lucida Grande", sans-serif; }
+}
+
+p {
+	font-size: 14px; font-size: 1.4rem;
+}
+@media handheld, only screen and (max-width: 767px) {
+	body, p {  font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
+}
+
+h2 {
+	font-weight: 600;
+	color: #555;
+	line-height: 1;
+	letter-spacing: -.1rem;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.row {
+	background: #FFF;
+	max-width: 960px;
+}
+
+header {
+	background: #666;
+	min-height: 100px;
+	padding-left: 0 20px;
+	margin-bottom: 15px;
+}
+header .row {
+	background: transparent;
+}
+header .logo .hide-on-print {
+	color: #FFF;
+}
+header .logo .print-only {
+	color: #444;
+}
+
+.productImg {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.thankyou h2 {
+	margin-bottom: 10px;
+}
+.thankyou h2 b, 
+.thankyou h2 em {
+	font-weight: 800;
+}
+.thankyou p {
+	font-weight: 300;
+	margin-bottom: 0;
+}
+.thankyou p.lead { 
+	margin-bottom: 15px;
+}
+
+.confirm_number {
+	font-size: 14px;
+	font-size: 1.6rem;
+	line-height: 18px;
+	font-weight:normal;
+	color:#555;
+}
+
+.top15 {padding-top:15px;}
+
+.purchInfo {
+	border-top: 1px solid #DDD;
+	padding-top: 20px;
+	margin-top: 15px;
+}
+.purchInfo p {
+	font-size: 16px; font-size: 1.6rem;
+	line-height: 20px;
+	font-weight: 300;
+}
+.purchInfo p.purchLabel {
+	font-size: 13px; font-size: 1.3rem;
+	color: #999;
+	font-weight: 700;
+}
+@media handheld, only screen and (max-width: 767px) {
+	.purchInfo p {  font-size: 18px; font-size: 1.8rem; line-height: 22px; }
+	.purchInfo p.purchLabel { font-size: 14px; font-size: 1.4rem; margin-bottom:5px; }
+}
+
+table {
+	width: 100%;
+	margin-top: 20px;
+	border:0;
+	border-top: 2px solid #CCC;
+}
+table thead tr {
+	background: #EEE;
+	border-bottom: 1px solid #DDD;
+}
+table tbody tr:last-child {
+	background: #FFF;
+	border-top: 1px solid #DDD;
+}
+table thead tr th, .total {
+	text-transform: uppercase;
+	font-size: 13px; font-size: 1.3rem;
+	color: #333;
+	font-weight: 700;
+}
+table tbody tr td.price {
+	font-weight: 700;
+	white-space: nowrap;
+}
+table tbody tr td.total {
+	text-align: right;
+}
+table tbody tr td {
+	font-size: 16px; font-size: 1.6rem;
+	line-height: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+@media handheld, only screen and (max-width: 767px) {
+	table tbody tr td { font-size: 14px; font-size: 1.4rem; line-height: 16px; }
+}
+th:first-child, td:first-child {
+	width: 15%;
+	text-align: center;
+}
+table thead tr th+th, table tbody tr td+td {
+	width:65%;
+	text-align: left;
+}
+table thead tr th:last-child, table tbody tr td:last-child {
+	width: 30%;
+	text-align: center;
+}
+@media handheld, only screen and (max-width: 767px) {
+	table thead tr th+th, table tbody tr td+td { width: 60%; }
+	table thead tr th:last-child, table tbody tr td:last-child { width: 35%; }
+}
+table tbody tr.even,
+table tbody tr.alt { background: #f2f2f2; }
+table tbody tr:nth-child(even) { background: #f2f2f2; }
